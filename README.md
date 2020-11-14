@@ -31,4 +31,13 @@ Side note: I had an error in running jupyter notebook, which was that the `jupyt
 
 My beginning approach was to first explore the data in a jupyter notebook, check out the quality of it to know whether any cleaning was necessary. I will also use this phase to put together ideas of how I may go about solving the problem, namely the general structure of functions/classes I will use and how they should hang together and decide the expected behaviour for them. This will also be the phase where I discern the ambiguities and decide on what assumptions if any I think are necessary.
 
-Once I have a clear idea of the shape of the solution and it's expected behaviour, and also a clear idea of what should be returned, I can write up the tests that will check all that, then get to work on filling in the functionality. I expect I will already have pieces of the code worked out in exploration phase. 
+Once I have a clear idea of the shape of the solution and it's expected behaviour, and also a clear idea of what should be returned, I can write up the tests that will check all that, then get to work on filling in the functionality. I expect I will already have pieces of the code worked out in exploration phase.
+
+### Assumptions
+
+Below is the full list of consciously made assumptions:
+
+1. All the original data must be returned plus the extra 2 columns.
+2. Records should match up both on longitude/latitude and registration date within the postcode introduced and terminated range (former inclusive, latter exclusive).
+3. Location strings will be comma separated with the last value being the postcode if there is one.
+4. Pairs of longitude and latitudes must be within 1 metre to count as matched. 
