@@ -1,3 +1,4 @@
+import os
 import sys
 import csv
 import pandas as pd
@@ -115,10 +116,12 @@ def run(address_list_file_path, postcode_reference_file_path, destination_file_p
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 3:
         print("Missing parameters, please make sure the command conforms to the below shape.")
-        print("python pipeline <address_list_file_path> <postcode_reference_file_path> <destination_file_path>")
+        print("python pipeline <address_list_file_path> <postcode_reference_file_path>")
     else:
-        address_list_file_path, postcode_reference_file_path, destination_file_path = sys.argv[1:]
+        address_list_file_path, postcode_reference_file_path = sys.argv[1:]
+        base = os.path.splitext(address_list_file_path)[0]
+        destination_file_path = base + '.tsv'
 
         run(address_list_file_path, postcode_reference_file_path, destination_file_path)

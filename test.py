@@ -9,7 +9,7 @@ class BaseTest(unittest.TestCase):
     def setUp(self):
         self._address_list_fname = 'test_address_list.csv'
         self._postcode_reference_fname = 'test_postcode_reference.csv'
-        self._destination_fname = 'test_result.tsv'
+        self._destination_fname = 'test_address_list.tsv'
 
         if os.path.isfile(self._destination_fname):
             os.remove(self._destination_fname)

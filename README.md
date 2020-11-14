@@ -62,8 +62,8 @@ To test the pipeline, all you need to do is run the following command in a termi
 
 To run the pipeline run the following command in the terminal.
 
-    python pipeline.py <address_list_file_path> <postcode_reference_file_path> <destination_file_path>
+    python pipeline.py <address_list_file_path> <postcode_reference_file_path>
 
 For example:
     
-    python pipeline.py address_list.csv postcode_reference.csv result.tsv
+    python pipeline.py address_list.csv postcode_reference.csv
