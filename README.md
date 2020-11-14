@@ -2,6 +2,15 @@
 
 In this README, I am documenting all the little steps I have taken to complete this project, from environment setup to assumptions made and how to test.
 
+### Contents of project
+
+1. The included data, **address_list.csv** and **postcode_reference.csv**.
+2. **data_exploration.ipynb** which is the notebook within which I explored the data.
+3. **requirements.txt** for the environment setup.
+4. The **test_\*.csv** files are the test data for the test suit.
+5. **test.py** is the file containing the tests, more on that in the testing section.
+6. **pipeline.py** is the file with the code for the pipeline.
+
 ### Setting up the environment
 
 If `virtualenv` is not installed, run the following commands to install, then create a virtual environment.
@@ -52,4 +61,8 @@ To test the pipeline, all you need to do is run the following command in a termi
 
 To run the pipeline run the following command in the terminal.
 
-    python pipeline <address_list_file_path> <postcode_reference_file_path> <destination_file_path>
+    python pipeline.py <address_list_file_path> <postcode_reference_file_path> <destination_file_path>
+
+For example:
+    
+    python pipeline.py address_list.csv postcode_reference.csv result.tsv
