@@ -10,6 +10,7 @@ In this README, I am documenting all the little steps I have taken to complete t
 4. The **test_\*.csv** files are the test data for the test suit.
 5. **test.py** is the file containing the tests, more on that in the testing section.
 6. **pipeline.py** is the file with the code for the pipeline.
+7. **result.tsv** is the result of running the pipeline.
 
 ### Setting up the environment
 
