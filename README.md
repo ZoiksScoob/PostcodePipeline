@@ -40,4 +40,16 @@ Below is the full list of consciously made assumptions:
 1. All the original data must be returned plus the extra 2 columns.
 2. Records should match up both on longitude/latitude and registration date within the postcode introduced and terminated range (former inclusive, latter exclusive).
 3. Location strings will be comma separated with the last value being the postcode if there is one.
-4. Pairs of longitude and latitudes must be within 1 metre to count as matched. 
+4. Pairs of longitude and latitudes must be within 1 metre to count as matched.
+
+### Testing procedure
+
+To test the pipeline, all you need to do is run the following command in a terminal.
+
+    python test.py  
+    
+### Run pipeline
+
+To run the pipeline run the following command in the terminal.
+
+    python pipeline <address_list_file_path> <postcode_reference_file_path> <destination_file_path>
